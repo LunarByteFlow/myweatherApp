@@ -1,0 +1,39 @@
+
+ feels_like_Element = document.getElementById("feels_like)             
+ humidity_Element = document.getElementById("humidity)             
+ max_temp_Element = document.getElementById("max_temp)             
+ min_temp_Element = document.getElementById("min_temp)             
+ sunrise_Element = document.getElementById("sunrise)             
+ sunset _Element = document.getElementById("sunset )             
+ temp _Element = document.getElementById("temp )             
+ wind_degrees_Element = document.getElementById("wind_degrees )             
+ wind_speed_Element = document.getElementById("wind_speed )             
+
+
+<li><span id = "feels_like"></span></li>
+<li><span id = "humidity"></span></li>
+<li><span id = "max_temp"></span></li>
+<li><span id = "min_temp"></span></li>
+<li><span id = "sunrise"></span></li>
+<li><span id = "sunset"></span></li>
+<li><span id = "sunset"></span></li>
+<li><span id = "wind_degrees"></span></li>
+<li><span id = "wind_speed"></span></li>
+
+
+
+
+
+
+
+
+
+feels_like
+humidity
+max_temp
+min_temp
+sunrise
+sunset 
+temp 
+wind_degrees 
+wind_speed 

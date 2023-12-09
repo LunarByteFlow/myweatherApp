@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+      /> -->
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-800">
+    <!-- </ul>
+          <form class="d-flex">
+            <input
+              id="city"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit" id="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav> -->
+    <!-- Adding Element -->
+    <!-- <main class="container mx-auto my-5">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">
+            Weather Update for
+          </h5>
+          <h1 class="card-subtitle mb-2 text-muted"><span id="cityName"></span></h1>
+          <li>Feels Like <b><span id="feels_like"></span></b>
+          </li>
+          <li>Humidity <b><span id="humidity"></span></b></li>
+          <li>Max Temperature is: <b><span id="max_temp"></span></b></li>
+          <li>Minimum temperature is :<b><span id="min_temp"></span></b></li>
+          <li>Sunrise Time is: <b><span id="sunrise"></span></b></li>
+          <li>Sunset time is: <b><span id="sunset"></span></b></li>
+          <li>Temperature is: <b><span id="temp"></span></b></li>
+          <li>Wind degrees is: <b><span id="wind_degrees"></span></b></li>
+          <li>Wind speed is:  <b><span id="wind_speed"></span></b></li>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- <main class="container mx-auto my-5">
+      <div class="bg-blue-800 p-6 rounded-lg shadow-md">
+        <h1 class="text-3xl font-semibold text-center mb-6">Weather Update for <span id="cityName"></span></h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Current Weather</h2>
+            <ul>
+              <li class="mb-2">Temperature: <span id="temp"></span></li>
+              <li class="mb-2">Feels Like: <span id="feels_like"></span></li>
+              <li class="mb-2">Humidity: <span id="humidity"></span></li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Weather Details</h2>
+            <ul>
+              <li class="mb-2">Max Temperature: <span id="max_temp"></span></li>
+              <li class="mb-2">Min Temperature: <span id="min_temp"></span></li>
+              <li class="mb-2">Wind Degrees: <span id="wind_degrees"></span></li>
+              <li class="mb-2">Wind Speed: <span id="wind_speed"></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-6 text-center text-gray-600">
+          <p>Sunrise Time: <span id="sunrise"></span></p>
+          <p>Sunset Time: <span id="sunset"></span></p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Navbar -->
+    <nav class="navbar py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-white text-3xl font-extrabold">Weather App</div>
+
+        <!-- Search Bar -->
+        <div class="relative">
+          <input
+            id="city"
+            type="search"
+            placeholder="Search"
+            placeholder="Search..."
+            class="bg-gray-200 text-gray-800 rounded-full px-4 py-2 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+          />
+          <button
+            type="submit"
+            id="submit"
+            class="bg-slate-900 text-white px-4 py-2 rounded-full ml-2 hover:bg-slate-600 transition duration-300"
+          >
+            Search
+          </button>
+          <div
+            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+          >
+            <svg
+              class="w-5 h-5 text-gray-400"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M14.293 15.293a1 1 0 001.414-1.414l-3.15-3.15a5.5 5.5 0 10-1.414 1.414l3.15 3.15a1 1 0 001.414 0zM13.5 6a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Weather Card -->
+    <main class="container mx-auto my-5">
+      <div class="weather-card p-6 rounded-lg shadow-md text-white container mr-1">
+        <h1 class="text-4xl font-extrabold text-center mb-6">
+          Weather Update for <span id="cityName"></span>
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Current Weather</h2>
+            <ul class="space-y-4">
+              <li>
+                <span class="text-gray-200 text-2xl">Temperature: </span>
+                <span id="temp" class="text-3xl font-bold"></span>
+              </li>
+              <li>
+                <span class="text-gray-200 text-2xl">Feels Like: </span>
+                <span id="feels_like" class="text-3xl font-bold"></span>
+              </li>
+              <li>
+                <span class="text-gray-200 text-2xl">Humidity: </span>
+                <span id="humidity" class="text-3xl font-bold"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-md">
+            <h2 class="text-4xl font-semibold mb-4">Weather Details</h2>
+            <ul class="space-y-4">
+              <li>
+                <span class="text-gray-200 text-2xl">Max Temperature: </span>
+                <span id="max_temp" class="text-3xl font-bold"> Celcius</span>
+              </li>
+              <li>
+                <span class="text-gray-200  text-2xl">Min Temperature: </span>
+                <span id="min_temp" class="text-3xl font-bold" id="min_temp" > Celcius</span>
+              </li>
+              <li>
+                <span class="text-gray-200  text-2xl">Wind Degrees: </span>
+                <span id="wind_degrees" class="text-3xl font-bold"> Celcius</span>
+              </li>
+              <li>
+                <span class="text-gray-200  text-2xl">Wind Speed: </span>
+                <span id="wind_speed" class="text-3xl font-bold"> </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-400">
+          <p>
+            <span class="text-white-300">Sunrise Time:</span>
+            <span id="sunrise" class="text-2xl font-bold"></span>
+          </p>
+          <p>
+            <span class="text-white-900">Sunset Time:</span>
+            <span id="sunset" class="text-2xl font-bold"></span>
+          </p>
+        </div>
+      </div>
+    </main>
+
+
+
+  
+
+    <!-- <script src="script.js"></script>
+     -->
+    <script src="../script.js"></script>
+    <script src="../script_boston.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
